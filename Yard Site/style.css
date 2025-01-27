@@ -1,118 +1,150 @@
-
-.container {  display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "White Black"
-      "Gray Gray";
-  }
-  
-  .Black { grid-area: Black;
-    background-color: #1C1818;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    }
-  
-  .Gray { grid-area: Gray; 
-    background-color: #d1cdcd;
-
-    }
-  
-  .White { grid-area: White; 
-    background-color: #ffffff;
-    color: black;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-
-    }
-  
-  
-  html, body , .container {
-    height: 100%;
-    margin: 0;
-}
-  
-
-  
-
-
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #d2d2d2;
+:root{
+  --bottom-background-color: gray;
 }
 
-.whiteText{
+.container {
   display: flex;
-    color: red;
-    font-size: 20px;
-    flex-direction: column;
-    margin: 10px;
-    height: 100%;
-    justify-content: space-evenly;
-}
-
-.whiteText h1{
-    color: blue;
-    font-size:34px;
-}
-
-.whiteText h2{
-  font-size:20px;
-  margin:15px;
-}
-
-.whiteText p{
-
-  font-size:18px;
-  margin:25px;
-}
-
-.flexBox{
-    display: flex;
-    justify-content: center;
-    height: 150px;
+  flex-direction: column ;
 
 }
 
-.flexBox2{
+.back-button {
+  position: absolute;
+  margin: 20px;
+  padding: 5px 20px;
+  font-size: 2rem;
+  /* make sure it doesn't show as a link */
+  text-decoration: none;
+  color: black;
+  background-color: var(--bottom-background-color);
+}
+
+.top-container {
   display: flex;
+  position: relative;
+  /* padding: 0 20px; */
+}
+
+.top-text-container {
+  padding: 0 20px;
+  padding-top: 100px;
+  /* padding-bottom: 25px; */
+  margin-bottom: 50px;
+  font-size: 1.5rem;
+}
+
+.top-container .Black, .top-container .White {
+  flex: 1;
+  /* padding: 0 20px; */
+
+}
+
+.Black {
+  background-color: black;
+  color: white;
+}
+
+.Black .Items .top-text-container {
+  text-align: end;
+}
+
+.bottom-text-container {
+  padding: 0 20px;
+  color: aqua;
+  font-size: 2rem;
+  /* line-height: 5rem; */
+}
+
+.bottom-text-container h2{
+  margin-bottom: 50px;
+}
+
+.bottom-text-container ul {
+  padding:  0 30px;
+}
+
+
+
+.img-wrapper {
+  /* display: flex; */
+  width: 100%;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.Gray {
+  background-color: var(--bottom-background-color);
+  position: relative
+}
+
+
+/* slope of the gray area */
+.slope-container {
+  position: absolute;
+  top: -40px;
+  height: 40px;
+  width: 100%;
+  clip-path: polygon(0% 0%, 50% 88%, 100% 0%, 100% 100%, 0 100%);
+  background-color: var(--bottom-background-color)
+ 
+}
+
+.flexBox {
+  display: flex;
+  padding: 40px 100px;
   justify-content: center;
-  height: 150px;
-  
-
+  flex-wrap: wrap;
+  gap: 16px; /* Optional: adds spacing between boxes */
+  /* max-width: ; */
+  /* align-items: center; */
+  /* align-content: center; */
 }
 
-.flexBoxItem {
+.flexBoxItem{
+  /* text-align: center; */
+  width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 20px;
+}
+
+.middle-text {
+  display: flex;
+  gap: 2px;
+}
+
+.outline-btn {
+  margin-top: 10px;
+  /* align-self: flex-start; Prevents stretching */
+  display: inline-block;
+  outline: 1.5px solid black;
+  border-radius: 50px;
+  padding: 2px 7px;
+  /* flex-shrink: inherit; */
+}
+
+@media (max-width: 768px) {
+
+  .top-container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background-color: white;
-    margin: 10px;
-    padding: 40px;
+    flex-direction: column ;
+  }
 
-
+  .top-container .Black, .top-container .White {
+   
+    /* padding: 0 20px; */
+  
+  }
 }
-
-.Background{
-    width: 600px;
-    height: 300px;
-    object-fit: cover;
-}
-
-
-
-
-
-
