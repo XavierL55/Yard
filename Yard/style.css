@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +6,7 @@
 }
 
 :root{
-  --bottom-background-color: gray;
+  --bottom-background-color: rgb(194, 194, 194);
 }
 
 .container {
@@ -37,6 +38,7 @@
   /* padding-bottom: 25px; */
   margin-bottom: 50px;
   font-size: 1.5rem;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .top-container .Black, .top-container .White {
@@ -44,6 +46,8 @@
   /* padding: 0 20px; */
 
 }
+
+
 
 .Black {
   background-color: black;
@@ -56,7 +60,8 @@
 
 .bottom-text-container {
   padding: 0 20px;
-  color: aqua;
+  color: rgb(147, 220, 220);
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-size: 2rem;
   /* line-height: 5rem; */
 }
@@ -70,6 +75,12 @@
 }
 
 
+.middle-text img{
+  height: 25px;
+  width: 25px;
+
+
+}
 
 .img-wrapper {
   /* display: flex; */
@@ -91,7 +102,7 @@
 /* slope of the gray area */
 .slope-container {
   position: absolute;
-  top: -40px;
+  top: -39px;
   height: 40px;
   width: 100%;
   clip-path: polygon(0% 0%, 50% 88%, 100% 0%, 100% 100%, 0 100%);
@@ -113,16 +124,18 @@
 .flexBoxItem{
   /* text-align: center; */
   width: 500px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   gap: 5px;
   padding: 20px;
+  background-color: rgb(199, 199, 199);
 }
 
 .middle-text {
   display: flex;
   gap: 2px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .outline-btn {
@@ -144,7 +157,16 @@
 
   .top-container .Black, .top-container .White {
    
-    /* padding: 0 20px; */
+    padding: 0 20px;
   
   }
+
+  .top-text-container h1{
+    display: flex;
+    justify-content: center;
+
+  }
+
+
+
 }
